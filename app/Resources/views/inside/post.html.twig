@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+{% block body %}
+    <div class="content">
+        <div class="content-block">
+            <span class="title">New advertisement</span>
+            {{ form_start(form) }}
+            {{ form_widget(form.title, {'attr': {'class': 'form-control divider', 'placeholder':'Title'}}) }}
+            {{ form_widget(form.description, {'attr': {'class': 'form-control divider', 'placeholder':'Description'}}) }}
+            {{ form_widget(form.save, {'attr': {'class': 'btn btn-primary btn-block'}, 'label': 'Add'}) }}
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}

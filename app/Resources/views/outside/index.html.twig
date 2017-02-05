@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+{% block body %}
+    <div class="content">
+        {% for advertisement in advertisements %}
+            <div class="content-block text">
+                <span>{{ advertisement.dateCreated|date('Y-m-d H:i:s') }}</span>
+                <span class="title">{{ advertisement.title }}</span>
+                <span>by: <span>{{ advertisement.user.username }}</span></span>
+                <div class="description">{{ advertisement.description }}</div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

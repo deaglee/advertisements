@@ -1,0 +1,40 @@
+.content {
+    padding: 20px 50px;
+}
+.content-block {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px #ddd solid;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.divider {
+    margin-bottom: 10px;
+}
+.content-block.text {
+    cursor: pointer;
+}
+.content-block.text:hover {
+    background-color: #fcfdff;
+}
+.description {
+    margin-top: 20px;
+}
+input {
+    margin-bottom: 10px;
+}
+.title {
+    font-weight: bold;
+    font-size: 20px;
+}
+.logged-in {
+    color: white;
+    height: 50px;
+    float: right;
+    line-height: 50px;
+}
+.logout {
+    float: right;
+}

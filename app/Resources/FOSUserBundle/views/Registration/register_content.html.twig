@@ -1,0 +1,20 @@
+{% extends "base.html.twig" %}
+{% block body %}
+<div class="content">
+    <div class="content-block">
+        {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+            <span class="title">Registration</span>
+            {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register')}) }}
+            {{ form_widget(form.email, {'attr': {'class': 'form-control divider', 'placeholder':'Email'}}) }}
+            {{ form_widget(form.username, {'attr': {'class': 'form-control divider', 'placeholder':'User Name'}}) }}
+            {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control divider', 'placeholder':'Password'}}) }}
+            {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control divider', 'placeholder':'Repeat password'}}) }}
+            <input type="submit" value="Register" class="btn btn-primary btn-block" />
+            {{ form_end(form) }}
+        {% endif %}
+        {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+            You are already logged in!
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
